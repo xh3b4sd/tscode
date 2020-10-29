@@ -1,0 +1,15 @@
+{
+  "name": "tscode",
+  "version": "0.1.0",
+  "description": "dummy repo for generated ts code",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xh3b4sd/tscode.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xh3b4sd/tscode/issues"
+  },
+  "homepage": "https://github.com/xh3b4sd/tscode#readme"
+}
