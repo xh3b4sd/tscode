@@ -6,6 +6,15 @@
     "type": "git",
     "url": "git+https://github.com/xh3b4sd/tscode.git"
   },
+  "exports": {
+    "." : {
+      "require": "./pkg/index.js"
+    }
+  },
+  "files": [
+    "pkg"
+  ],
+  "main": "./pkg/index.js",
   "author": "",
   "license": "MIT",
   "bugs": {
