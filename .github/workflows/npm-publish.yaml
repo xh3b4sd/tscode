@@ -23,7 +23,13 @@ jobs:
           node-version: "15.x"
           registry-url: "https://npm.pkg.github.com"
 
+      - name: "Install NPM Dependencies"
+        run: |
+          npm install rollup --global
+          npm install @rollup/plugin-typescript --global
+
       - name: "Publish NPM Package"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm publish
+        run: | 
+          npm publish
