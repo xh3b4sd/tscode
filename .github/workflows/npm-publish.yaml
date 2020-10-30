@@ -6,7 +6,7 @@ name: "npm-publish"
 
 on:
   release:
-    types: 
+    types:
       - "created"
 
 jobs:
@@ -28,8 +28,12 @@ jobs:
           npm install rollup --global
           npm install @rollup/plugin-typescript --save-dev
 
+      - name: "Build NPM Package"
+        run: |
+          npm run build
+
       - name: "Publish NPM Package"
         env:
           NODE_AUTH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        run: | 
+        run: |
           npm publish
