@@ -4,7 +4,10 @@
 
 name: "npm-publish"
 
-on: "push"
+on:
+  release:
+    types: 
+      - "created"
 
 jobs:
   npm-publish:
@@ -29,4 +32,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: | 
-          npm publish --tag ${{ github.sha }}
+          npm publish
