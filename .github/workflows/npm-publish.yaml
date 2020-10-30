@@ -23,6 +23,7 @@ jobs:
       - name: "Install NPM Dependencies"
         run: |
           npm install rollup --global
+          npm install @rollup/plugin-typescript --save-dev
 
       - name: "Publish NPM Package"
         env:
