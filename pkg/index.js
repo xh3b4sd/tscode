@@ -1,1 +1,1 @@
-export * from './pkg/pbf';
+export * from './pbf';
