@@ -12,11 +12,11 @@
       "default": "./dist/index.es.js"
     }
   },
-  "module": "dist/index.es.js",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "module": "./dist/index.es.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "build": "./node_modules/rollup/dist/bin/rollup -c --exports named"
   },
   "sideEffects": false,
   "files": [
