@@ -4,16 +4,16 @@ import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
 
 export default {
-  input: "src/index.ts",
+  input: "pkg/index.ts",
   output: [
     {
       format: "cjs",
-      dir: "dist",
+      dir: "dst",
       sourcemap: true,
     },
     {
       format: "es",
-      dir: "dist",
+      dir: "dst",
       sourcemap: true,
     },
   ],

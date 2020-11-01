@@ -34,5 +34,8 @@ export declare class APIClient {
     methodInfoUpdate: grpcWeb.AbstractClientBase.MethodInfo<update_pb.UpdateI, update_pb.UpdateO>;
     update(request: update_pb.UpdateI, metadata: grpcWeb.Metadata | null): Promise<update_pb.UpdateO>;
     update(request: update_pb.UpdateI, metadata: grpcWeb.Metadata | null, callback: (err: grpcWeb.Error, response: update_pb.UpdateO) => void): grpcWeb.ClientReadableStream<update_pb.UpdateO>;
+    methodInfoTest: grpcWeb.AbstractClientBase.MethodInfo<update_pb.UpdateI, update_pb.UpdateO>;
+    test(request: update_pb.UpdateI, metadata: grpcWeb.Metadata | null): Promise<update_pb.UpdateO>;
+    test(request: update_pb.UpdateI, metadata: grpcWeb.Metadata | null, callback: (err: grpcWeb.Error, response: update_pb.UpdateO) => void): grpcWeb.ClientReadableStream<update_pb.UpdateO>;
 }
 //# sourceMappingURL=ApiServiceClientPb.d.ts.map
