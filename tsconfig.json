@@ -9,18 +9,18 @@
     "sourceMap": true,
     "noLib": false,
     "declaration": true,
-    "declarationDir": "./dist",
-    "outDir": "./dist",
+    "declarationDir": "./dst",
+    "outDir": "./dst",
     "incremental": false,
     "newLine": "lf",
     "lib": ["dom", "es2018", "scripthost"],
     "esModuleInterop": true,
-    "rootDir": "src",
+    "rootDir": "pkg",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "typeRoots": ["./types", "./node_modules/@types"],
     "declarationMap": true
   },
-  "exclude": ["node_modules", "src/*_test.ts", "dist"],
-  "include": ["src/**/*"]
+  "exclude": ["node_modules", "pkg/*_test.ts", "dst"],
+  "include": ["pkg/**/*"]
 }

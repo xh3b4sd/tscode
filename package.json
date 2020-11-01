@@ -8,19 +8,19 @@
   },
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "default": "./dist/index.es.js"
+      "require": "./dst/index.js",
+      "default": "./dst/index.es.js"
     }
   },
-  "module": "./dist/index.es.js",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "module": "./dst/index.es.js",
+  "main": "./dst/index.js",
+  "types": "./dst/index.d.ts",
   "scripts": {
     "build": "./node_modules/rollup/dist/bin/rollup -c --exports named"
   },
   "sideEffects": false,
   "files": [
-    "dist"
+    "dst"
   ],
   "dependencies": {
     "google-protobuf": "^3.13.0",
