@@ -10,6 +10,15 @@ Dummy repo for generated ts code.
 npm install xh3b4sd/tscode
 ```
 
+```
+$ cat package.json
+...
+"dependencies": {
+  "@xh3b4sd/tscode": "github:xh3b4sd/tscode#v0.7.2"
+},
+...
+```
+
 
 
 ### Usage
