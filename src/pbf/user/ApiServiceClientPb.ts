@@ -200,45 +200,4 @@ export class APIClient {
       this.methodInfoUpdate
     );
   }
-
-  methodInfoTest = new grpcWeb.AbstractClientBase.MethodInfo(
-    update_pb.UpdateO,
-    (request: update_pb.UpdateI) => {
-      return request.serializeBinary();
-    },
-    update_pb.UpdateO.deserializeBinary
-  );
-
-  test(
-    request: update_pb.UpdateI,
-    metadata: grpcWeb.Metadata | null
-  ): Promise<update_pb.UpdateO>;
-
-  test(
-    request: update_pb.UpdateI,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.Error, response: update_pb.UpdateO) => void
-  ): grpcWeb.ClientReadableStream<update_pb.UpdateO>;
-
-  test(
-    request: update_pb.UpdateI,
-    metadata: grpcWeb.Metadata | null,
-    callback?: (err: grpcWeb.Error, response: update_pb.UpdateO) => void
-  ) {
-    if (callback !== undefined) {
-      return this.client_.rpcCall(
-        this.hostname_ + "/api.API/Test",
-        request,
-        metadata || {},
-        this.methodInfoTest,
-        callback
-      );
-    }
-    return this.client_.unaryCall(
-      this.hostname_ + "/api.API/Test",
-      request,
-      metadata || {},
-      this.methodInfoTest
-    );
-  }
 }
