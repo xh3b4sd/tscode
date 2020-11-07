@@ -15,12 +15,12 @@
     "newLine": "lf",
     "lib": ["dom", "es2018", "scripthost"],
     "esModuleInterop": true,
-    "rootDir": "pkg",
+    "rootDir": "src",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "typeRoots": ["./types", "./node_modules/@types"],
     "declarationMap": true
   },
-  "exclude": ["node_modules", "pkg/*_test.ts", "dst"],
-  "include": ["pkg/**/*"]
+  "exclude": ["node_modules", "src/*_test.ts", "dst"],
+  "include": ["src/**/*"]
 }
