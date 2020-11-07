@@ -1,26 +1,39 @@
 {
   "compilerOptions": {
-    "module": "es6",
-    "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "target": "es5",
-    "moduleResolution": "node",
-    "removeComments": false,
-    "sourceMap": true,
-    "noLib": false,
     "declaration": true,
     "declarationDir": "./dst",
-    "outDir": "./dst",
-    "incremental": false,
-    "newLine": "lf",
-    "lib": ["dom", "es2018", "scripthost"],
+    "declarationMap": true,
     "esModuleInterop": true,
-    "rootDir": "src",
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "typeRoots": ["./types", "./node_modules/@types"],
-    "declarationMap": true
+    "incremental": false,
+    "lib": [
+      "dom",
+      "es2018",
+      "scripthost"
+    ],
+    "module": "es6",
+    "moduleResolution": "node",
+    "newLine": "lf",
+    "noImplicitAny": false,
+    "noLib": false,
+    "outDir": "./dst",
+    "removeComments": false,
+    "rootDir": "src",
+    "sourceMap": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5",
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ]
   },
-  "exclude": ["node_modules", "src/*_test.ts", "dst"],
-  "include": ["src/**/*"]
+  "exclude": [
+    "node_modules",
+    "src/*_test.ts",
+    "dst"
+  ],
+  "include": [
+    "src/**/*"
+  ]
 }
