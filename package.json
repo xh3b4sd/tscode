@@ -1,6 +1,6 @@
 {
   "name": "@xh3b4sd/tscode",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "dummy repo for generated ts code",
   "repository": {
     "type": "git",
@@ -16,7 +16,8 @@
   "main": "./dst/index.js",
   "types": "./dst/index.d.ts",
   "scripts": {
-    "build": "./node_modules/rollup/dist/bin/rollup -c --exports named"
+    "build": "./node_modules/rollup/dist/bin/rollup -c --exports named",
+    "prepare": "./node_modules/rollup/dist/bin/rollup -c --exports named"
   },
   "sideEffects": false,
   "files": [
