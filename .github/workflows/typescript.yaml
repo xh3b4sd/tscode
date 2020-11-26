@@ -20,16 +20,34 @@ jobs:
       - name: "Setup Ts Env"
         uses: "actions/setup-node@v1"
         with:
-          node-version: "15.x.x"
+          node-version: "14.x.x"
 
       - name: "Install Ts Dependencies"
         run: |
           npm install
           npm install prettier --global
 
+      - name: "Prevent Js Files"
+        run: |
+          if [[ $(find ./src -name "*.js" -not -name "*_pb.js") ]]; then
+            echo "found .js files"
+            exit 1
+          fi
+
+      - name: "Check Git Project"
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+            echo "found dirty files"
+            exit 1
+          fi
+
       - name: "Check Ts Formatting"
         run: |
-          prettier -c $(find ./src/ -name "*.ts" -o -name "*.tsx")
+          prettier -c $(find ./src -name "*.ts" -o -name "*.tsx")
+
+      - name: "Check Ts Tests"
+        run: |
+          npm run test --if-present
 
       - name: "Build Ts Project"
         run: |
